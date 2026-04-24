@@ -5,6 +5,7 @@ const learn_primitive = @import("learn_primitive");
 const number3264 = @import("number3264.zig");
 const time = @import("time.zig");
 const buffer_bits_demo = @import("buffer_bits_demo.zig");
+const pointer = @import("pointer.zig");
 
 pub fn main(init: std.process.Init) !void {
     // Prints to stderr, unbuffered, ignoring potential errors.
@@ -59,7 +60,10 @@ pub fn main(init: std.process.Init) !void {
     try time.timing(io);
 
     try number3264.percission();
-    buffer_bits_demo.run();
+
+    try pointer.tryrefer();
+
+    try buffer_bits_demo.run();
 
     try stdout_writer.flush(); // Don't forget to flush!
 }

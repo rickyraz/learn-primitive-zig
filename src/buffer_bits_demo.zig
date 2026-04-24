@@ -2,7 +2,7 @@ const std = @import("std");
 
 const print = std.debug.print;
 
-pub fn run() void {
+pub fn run() !void {
     print("\n--- buffer bits demo ---\n", .{});
 
     // 4-byte buffer with explicit values.
